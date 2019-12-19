@@ -1,0 +1,2824 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "v0.2 (0.2.",
+        "title": "Partner Application SDK",
+        "description": "",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/dev.printos.api.hp.com\/platform\/"
+    ],
+    "paths": {
+        "\/api\/aaa\/v4\/users": {
+            "get": {
+                "summary": "Get a user by user identifier",
+                "description": "Returns the user information",
+                "operationId": "RetrieveUser",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "successful operation",
+                        "content": {
+                            "application\/json": {
+                                "schema": {
+                                    "$href": "#\/components\/schemas\/user"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update user",
+                "description": "Updates the information about the user.",
+                "operationId": "UpdateUser",
+                "deprecated": 0,
+                "parameters": []
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "ActivationStatus": {
+                "type": "object",
+                "properties": {
+                    "deviceId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "pn": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "sn": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "accountID": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "errorMessage": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ActivationStatusListWithContext": {
+                "type": "object",
+                "properties": {
+                    "context": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "activationStatuses": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "context": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "activationStatuses": {
+                "type": "array"
+            },
+            "ActivationStatusListWithContextList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "activationStatusesWithContext": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "activationStatusesWithContext": {
+                "type": "array"
+            },
+            "Address": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "addressLine1": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "addressLine2": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "locality": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "region": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "country": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "postalCode": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "links": {
+                "type": "object"
+            },
+            "AddressList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "addresses": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "addresses": {
+                "type": "object"
+            },
+            "AlternateAccount": {
+                "type": "object",
+                "properties": {
+                    "appName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "alternateLogin": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "alternateEmail": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "AlternateAccountStatus": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Application": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "settableViaSupport": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "settableViaEcommerce": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "supportedByHP": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "requiredDeviceTypes": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "deviceRestrictionType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "requiredInternalIdGBUs": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "requiredDeviceTypes": {
+                "type": "array"
+            },
+            "requiredInternalIdGBUs": {
+                "type": "array"
+            },
+            "ApplicationList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "applications": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "applications": {
+                "type": "array"
+            },
+            "AuthParams": {
+                "type": "object",
+                "properties": {
+                    "requestToken": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "permissions": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "organizations": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "checkedObjectName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "serviceId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "performCrossServiceCheck": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "permissions": {
+                "type": "array"
+            },
+            "organizations": {
+                "type": "array"
+            },
+            "ChannelCompany": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "organizationId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "organizationName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "endUserDataList": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "deviceCounts": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "endUserDataList": {
+                "type": "array"
+            },
+            "deviceCounts": {
+                "type": "object"
+            },
+            "ChannelCompanyList": {
+                "type": "object",
+                "properties": {
+                    "companies": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "companyCounts": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "companies": {
+                "type": "array"
+            },
+            "companyCounts": {
+                "type": "object"
+            },
+            "ContextList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "contexts": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "contexts": {
+                "type": "array"
+            },
+            "Counts": {
+                "type": "object",
+                "properties": {
+                    "registered": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unregistered": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "Credentials": {
+                "type": "object",
+                "properties": {
+                    "login": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "limitedMappedSession": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "Device": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "active": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "locked": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "serialNumber": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "model": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "organizationId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "jobDestination": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "parentId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "scitexId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "site": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "shareState": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "anonymous": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "createdTime": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastLoggedInTime": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "signature": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "signatureVersion": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "extendedInformation": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "postcard": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "jobDestination": {
+                "type": "object",
+                "properties": {
+                    "agentId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "jobDeliveryType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "JDFolder": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "jdfolder": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "jmfURL": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "site": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Address": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "primaryAddress": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "timezone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "organizationId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "hpRegion": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "mdcpId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "primaryPhone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "addresses": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "DeviceIdentifier": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "model": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "serialNumber": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "scitexId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "DeviceList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "devices": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "devices": {
+                "type": "array"
+            },
+            "DeviceProvisionedState": {
+                "type": "object",
+                "properties": {
+                    "deviceId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "model": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "serialNumber": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "state": {
+                        "description": "",
+                        "type": "integer"
+                    }
+                }
+            },
+            "DeviceWithCredentials": {
+                "type": "object",
+                "properties": {
+                    "Device": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "device": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Credentials": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "credentials": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "EndUserData": {
+                "type": "object",
+                "properties": {
+                    "customerCode": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "endUserId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "endUserName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "registeredDeviceSNs": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "unregisteredDeviceSNs": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "registeredDeviceSNs": {
+                "type": "array"
+            },
+            "unregisteredDeviceSNs": {
+                "type": "array"
+            },
+            "EntityPermissions": {
+                "type": "object",
+                "properties": {
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "Device": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "device": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "service": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "context": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "permissions": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "linkPermissions": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "permissionsMultiOrg": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "entityId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "user": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "locked": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "active": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "displayName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "primaryPhone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "primaryEmail": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "Address": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "primaryAddress": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "createdTime": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "certificationId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "hpidId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "eulaVersion": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "needToAcceptEula": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "privacyVersion": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "needToAcceptPrivacy": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "hpRegion": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastLoggedInTime": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastSeenTime": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "hasPIN": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "pin": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "service": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "active": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "createdTime": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastLoggedInTime": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "linkPermissions": {
+                "type": "object"
+            },
+            "permissionsMultiOrg": {
+                "type": "object"
+            },
+            "Eula": {
+                "type": "object",
+                "properties": {
+                    "eulaVersion": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Feature": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "settableViaSupport": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "settableViaEcommerce": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "locked": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "FeatureList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "features": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "features": {
+                "type": "array"
+            },
+            "Folder": {
+                "type": "object",
+                "properties": {
+                    "path": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "friendlyName": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "GrantedUser": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "displayName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "context": {
+                        "description": "Reference",
+                        "type": "object"
+                    },
+                    "grantedByContext": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "GrantedUserList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "grantedUsers": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "grantedUsers": {
+                "type": "array"
+            },
+            "GrantedUserMapping": {
+                "type": "object",
+                "properties": {
+                    "userId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "grantedByOrganizationId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "GrantedUserRole": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "context": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "systemRole": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "grantedByContext": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "grantorEntityType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "grantorId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "systemRole": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "organizationType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "entityType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "grantedByOrganizationType": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "GrantedUserRoleList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "grantedUserRoles": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "grantedUserRoles": {
+                "type": "array"
+            },
+            "HMAC": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "active": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "key": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "secret": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "systemroleId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "organizationId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "partnerId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "HMACList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "hmacs": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "hmacs": {
+                "type": "array"
+            },
+            "HPIDLink": {
+                "type": "object",
+                "properties": {
+                    "loginLink": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "createLink": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "HPIDToken": {
+                "type": "object",
+                "properties": {
+                    "token": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "IdList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "ids": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "ids": {
+                "type": "array"
+            },
+            "InternalId": {
+                "type": "object",
+                "properties": {
+                    "gbu": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "gbuInternalId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "internalIdType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "reason": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "IteratorEntryStringJsonNode": {
+                "type": "object"
+            },
+            "IteratorJsonNode": {
+                "type": "object"
+            },
+            "IteratorString": {
+                "type": "object"
+            },
+            "JDFolder": {
+                "type": "object",
+                "properties": {
+                    "localFolder": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "domain": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "username": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "folders": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "folders": {
+                "type": "array"
+            },
+            "JsonNode": {
+                "type": "object",
+                "properties": {
+                    "int": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "IteratorJsonNode": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "elements": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "booleanValue": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "doubleValue": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "longValue": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "number": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "long": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "double": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "bigInteger": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "bigDecimal": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "numberValue": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "numberType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "intValue": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "bigIntegerValue": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "decimalValue": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "binaryValue": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "valueAsInt": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "valueAsLong": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "valueAsDouble": {
+                        "description": "",
+                        "type": "number"
+                    },
+                    "valueAsBoolean": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "valueNode": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "containerNode": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "floatingPointNumber": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "missingNode": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "object": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "pojo": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "integralNumber": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "textual": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "boolean": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "binary": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "valueAsText": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "IteratorString": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "fieldNames": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "textValue": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "array": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "IteratorEntryStringJsonNode": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "fields": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "null": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "numberValue": {
+                "type": "object"
+            },
+            "binaryValue": {
+                "type": "array"
+            },
+            "Link": {
+                "type": "object",
+                "properties": {
+                    "op": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "href": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "rel": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MDCP": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "mdcpOrgId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "mdcpPartnerOrgId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "mdcpSiteInstanceId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "mdcpSiteId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "MDCPList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "mdcps": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "mdcps": {
+                "type": "array"
+            },
+            "Number": {
+                "type": "object"
+            },
+            "Organization": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "locked": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "internalIds": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "hasMDCP": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "createdTime": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "hpInternal": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "anonymous": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "internalIds": {
+                "type": "array"
+            },
+            "OrganizationAndAdminUser": {
+                "type": "object",
+                "properties": {
+                    "Organization": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "organization": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "OrganizationList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "organizations": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "OrganizationShare": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "unshareable": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "OrganizationShareList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "organizations": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Package": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "settableViaSupport": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "settableViaEcommerce": {
+                        "description": "",
+                        "type": "boolean"
+                    }
+                }
+            },
+            "PackageList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "packages": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "packages": {
+                "type": "array"
+            },
+            "Permission": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "serviceId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "PermissionList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "permissions": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "Privacy": {
+                "type": "object",
+                "properties": {
+                    "privacyVersion": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ResellerOrganization": {
+                "type": "object",
+                "properties": {
+                    "organizationId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "hpInternal": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "locationCountries": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "locationCountries": {
+                "type": "array"
+            },
+            "ResellerOrganizationList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "organizations": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "ServiceList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "services": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "services": {
+                "type": "array"
+            },
+            "ServiceRole": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "serviceId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ServiceRoleList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "serviceRoles": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "serviceRoles": {
+                "type": "array"
+            },
+            "SiteDevices": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "siteId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "deviceIds": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "deviceIds": {
+                "type": "array"
+            },
+            "SiteList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "sites": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "sites": {
+                "type": "array"
+            },
+            "SummaryData": {
+                "type": "object",
+                "properties": {
+                    "numUsers": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "numDevices": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "deviceTypeCounts": {
+                        "description": "",
+                        "type": "object"
+                    }
+                }
+            },
+            "deviceTypeCounts": {
+                "type": "object"
+            },
+            "SystemRoleList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "systemRoles": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "systemRoles": {
+                "type": "array"
+            },
+            "TempUser": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "active": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "hasPIN": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "pin": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "TempUserList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "tempUsers": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "tempUsers": {
+                "type": "array"
+            },
+            "UserList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "users": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "users": {
+                "type": "array"
+            },
+            "UserNames": {
+                "type": "object",
+                "properties": {
+                    "firstName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "displayName": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UserNamesList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "users": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "UserRole": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "context": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "systemRole": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "UserRoleList": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "unfilteredTotal": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "integer"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "userRoles": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "userRoles": {
+                "type": "array"
+            },
+            "UserWithSystemRole": {
+                "type": "object",
+                "properties": {
+                    "user": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "systemroleId": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Entitlement": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "canRun": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "canBuy": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "canGrant": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "reason": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "canRunEvaluation": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "canBuyEvaluation": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "canGrantEvaluation": {
+                        "description": "",
+                        "type": ""
+                    }
+                }
+            },
+            "canRunEvaluation": {
+                "type": "object"
+            },
+            "canBuyEvaluation": {
+                "type": "object"
+            },
+            "canGrantEvaluation": {
+                "type": "object"
+            },
+            "EntitlementList": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "applications": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "features": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "grants": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "grants": {
+                "type": "array"
+            },
+            "EvaluationResult": {
+                "type": "object",
+                "properties": {
+                    "result": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "operation": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "parameter": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "children": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "children": {
+                "type": "array"
+            },
+            "Capability": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "reason": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CapabilityList": {
+                "type": "object",
+                "properties": {
+                    "links": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "capabilities": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "capabilities": {
+                "type": "array"
+            },
+            "CapabilityQueryBean": {
+                "type": "object"
+            },
+            "UserPreferences": {
+                "type": "object",
+                "properties": {
+                    "general": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "allAppPreferences": {
+                        "description": "",
+                        "type": "object"
+                    }
+                }
+            },
+            "general": {
+                "type": "object"
+            },
+            "allAppPreferences": {
+                "type": "object"
+            },
+            "GeneralPreferences": {
+                "type": "object",
+                "properties": {
+                    "locale": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "timezone": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "unitSystem": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CareforceState": {
+                "type": "object",
+                "properties": {
+                    "careforceId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "careforceNumber": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "careforceSupportStatus": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "careforceStatus": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "lastModifiedDate": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "CaseReroute": {
+                "type": "object",
+                "properties": {
+                    "caseId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "routeId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "reroutedOn": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "reason": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "ContactMethod": {
+                "type": "object",
+                "properties": {
+                    "contactMethodType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "altContactValue": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Attachment": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "mimeType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "value": {
+                "type": "array"
+            },
+            "UserEntry": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userEntryType": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "value": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "UserSystemInfo": {
+                "type": "object",
+                "properties": {
+                    "browser": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "browserVersion": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "osVersion": {
+                        "description": "",
+                        "type": "string"
+                    }
+                }
+            },
+            "Case": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "organizationId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userId": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "subject": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userEntries": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "createdAt": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "caseSource": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "CareforceState": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "careforceState": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "ContactMethod": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "preferredContactMethod": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "attachments": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "UserSystemInfo": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "userSystemInfo": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "emailSupportStatus": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "CaseReroute": {
+                        "description": "",
+                        "type": "object"
+                    },
+                    "caseReroute": {
+                        "description": "",
+                        "type": ""
+                    },
+                    "sentToThirdPartyApp": {
+                        "description": "",
+                        "type": "boolean"
+                    },
+                    "gbuList": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "userEntries": {
+                "type": "array"
+            },
+            "attachments": {
+                "type": "array"
+            },
+            "gbuList": {
+                "type": "array"
+            },
+            "CreateCasePayload": {
+                "type": "object",
+                "properties": {
+                    "caseSource": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userEntries": {
+                        "description": "",
+                        "type": "array"
+                    }
+                }
+            },
+            "UpdateCasePayload": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "description": "",
+                        "type": "string"
+                    },
+                    "userEntries": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "CareforceState": {
+                        "description": "",
+                        "type": "object"
+                    }
+                }
+            },
+            "Cases": {
+                "type": "object",
+                "properties": {
+                    "total": {
+                        "description": "",
+                        "type": "int"
+                    },
+                    "offset": {
+                        "description": "",
+                        "type": "int"
+                    },
+                    "limit": {
+                        "description": "",
+                        "type": "int"
+                    },
+                    "list": {
+                        "description": "",
+                        "type": "array"
+                    },
+                    "links": {
+                        "description": "",
+                        "type": "null"
+                    }
+                }
+            },
+            "list": {
+                "type": "array"
+            }
+        }
+    }
+}
