@@ -1,0 +1,59 @@
+{
+    "id": "b475d29d30bcee0bb225089dcdbd8284",
+    "name": "Partner Application SDK",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "f0b4ec8671bb645efeee20569d37bc82",
+            "name": "Get a user by user identifier",
+            "url": "http:\/\/dev.printos.api.hp.com\/platform\/\/api\/aaa\/v4\/users",
+            "description": "Returns the user information",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b475d29d30bcee0bb225089dcdbd8284",
+            "rawModeData": ""
+        },
+        {
+            "id": "5e30f8b58d47d19df4be7ad8deee5614",
+            "name": "Update user",
+            "url": "http:\/\/dev.printos.api.hp.com\/platform\/\/api\/aaa\/v4\/users",
+            "description": "Updates the information about the user.",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "put",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "b475d29d30bcee0bb225089dcdbd8284",
+            "rawModeData": ""
+        }
+    ]
+}
