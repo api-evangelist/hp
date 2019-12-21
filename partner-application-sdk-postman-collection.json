@@ -1,5 +1,5 @@
 {
-    "id": "b475d29d30bcee0bb225089dcdbd8284",
+    "id": "1b579a54aa92f33900d9e0c9a2905924",
     "name": "Partner Application SDK",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "f0b4ec8671bb645efeee20569d37bc82",
+            "id": "9b59f70401da6ea43e9aeeed13889251",
             "name": "Get a user by user identifier",
             "url": "http:\/\/dev.printos.api.hp.com\/platform\/\/api\/aaa\/v4\/users",
             "description": "Returns the user information",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b475d29d30bcee0bb225089dcdbd8284",
+            "collectionId": "1b579a54aa92f33900d9e0c9a2905924",
             "rawModeData": ""
         },
         {
-            "id": "5e30f8b58d47d19df4be7ad8deee5614",
+            "id": "57f5fa3c20be467cbc56d99477f86e50",
             "name": "Update user",
             "url": "http:\/\/dev.printos.api.hp.com\/platform\/\/api\/aaa\/v4\/users",
             "description": "Updates the information about the user.",
@@ -52,7 +52,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "b475d29d30bcee0bb225089dcdbd8284",
+            "collectionId": "1b579a54aa92f33900d9e0c9a2905924",
             "rawModeData": ""
         }
     ]
