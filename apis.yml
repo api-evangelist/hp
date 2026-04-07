@@ -1,5 +1,6 @@
 aid: hp
-url: https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/apis.yml
 apis:
   - aid: hp:workforce-solutions-analytics-api
     name: HP Workforce Solutions Analytics API
@@ -8,11 +9,14 @@ apis:
       - Device Management
       - Workforce
       - TechPulse
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://daas.api.hp.com
-    humanURL: https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api
+    humanURL: 
+      https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api
     properties:
-      - url: https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api
+      - url: 
+          https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api
         type: Documentation
       - url: openapi/hp-workforce-solutions-analytics-api-openapi.yml
         type: OpenAPI
@@ -28,11 +32,14 @@ apis:
       - Devices
       - Cloud
       - PrintOS
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://printos.api.hp.com
-    humanURL: https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api
+    humanURL: 
+      https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api
     properties:
-      - url: https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api
+      - url: 
+          https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api
         type: Documentation
       - url: openapi/hp-printos-device-api-openapi.yml
         type: OpenAPI
@@ -41,3 +48,7 @@ apis:
       developers to attach their devices to the PrintOS Cloud Platform. Once
       provisioned, devices can make secure REST calls to interact with the
       platform APIs to send device status and perform operations.
+description: >-
+  HP Inc. is a global technology company that provides personal computing devices,
+  printers, 3D printing solutions, hyperscale computing solutions, and related supplies,
+  services, and software.
