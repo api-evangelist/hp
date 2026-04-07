@@ -71,10 +71,10 @@ paths:
 tags:
   - name: Analytics
     description: Device analytics operations
-  - name: Incidents
-    description: Incident management operations
   - name: Devices
     description: Device management operations
+  - name: Incidents
+    description: Incident management operations
 components:
   schemas:
     DeviceAnalytics:
