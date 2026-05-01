@@ -1,14 +1,26 @@
-# HP
+# HP (hp)
 
-HP Inc. is a global technology company that provides personal computing devices, printers, and related technology solutions, services, and support. Headquartered in Palo Alto, California, HP designs and manufactures PCs, laptops, printers, and 3D printing solutions for consumers and businesses.
+HP Inc. is a global technology company that provides personal computing devices, printers, 3D printing solutions, hyperscale computing solutions, and related supplies, services, and software.
 
-**Scope:** 3rd-Party
+**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/apis.yml)
 
-**Tags:** Computer Hardware, Printing, Technology, Device Management
+## Scope
 
-**Timestamps:**
+- **Type:** Index
+- **Position:** Consumer
+- **Access:** 3rd-Party
+
+## Tags
+
+- Computer Hardware
+- Device Management
+- Printing
+- Technology
+
+## Timestamps
+
 - **Created:** 2026-03-21
-- **Modified:** 2026-03-21
+- **Modified:** 2026-04-28
 
 ## APIs
 
@@ -17,7 +29,8 @@ HP Inc. is a global technology company that provides personal computing devices,
 The HP Workforce Solutions Analytics API (formerly TechPulse Analytics API) provides insightful analytics on planning, cost optimization, and service management capabilities for devices enrolled in HP Proactive Insights. It supports OAuth2 authentication.
 
 - **Human URL:** https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api
-- **Tags:** Analytics, Device Management, Workforce, TechPulse
+- **Base URL:** https://daas.api.hp.com
+- **Tags:** Analytics, Device Management, TechPulse, Workforce
 - **Properties:**
   - [Documentation](https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api)
   - [OpenAPI](openapi/hp-workforce-solutions-analytics-api-openapi.yml)
@@ -27,7 +40,8 @@ The HP Workforce Solutions Analytics API (formerly TechPulse Analytics API) prov
 The HP PrintOS Device API enables device manufacturers and print shop IT developers to attach their devices to the PrintOS Cloud Platform. Once provisioned, devices can make secure REST calls to interact with the platform APIs to send device status and perform operations.
 
 - **Human URL:** https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api
-- **Tags:** Printing, Devices, Cloud, PrintOS
+- **Base URL:** https://printos.api.hp.com
+- **Tags:** Cloud, Devices, Printing, PrintOS
 - **Properties:**
   - [Documentation](https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api)
   - [OpenAPI](openapi/hp-printos-device-api-openapi.yml)
@@ -35,8 +49,9 @@ The HP PrintOS Device API enables device manufacturers and print shop IT develop
 ## Common Properties
 
 - [Website](https://www.hp.com/)
+- [Developer Portal](https://developers.hp.com/)
 
 ## Maintainers
 
-- **Name:** API Evangelist
+- **FN:** Kin Lane
 - **Email:** info@apievangelist.com
