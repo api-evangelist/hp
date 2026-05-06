@@ -1,0 +1,133 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: HP PrintOS Device API
+  description: The HP PrintOS Device API enables device manufacturers and print shop IT developers to attach their devices
+    to the PrintOS Cloud Platform and interact with platform services.
+  tags:
+  - Hp
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: hp
+    baseUri: https://printos.api.hp.com
+    description: HP PrintOS Device API HTTP API.
+    resources:
+    - name: devices
+      path: /devices
+      operations:
+      - name: listdevices
+        method: GET
+        description: List Devices
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: provisiondevice
+        method: POST
+        description: Provision Device
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: devices-deviceid-status
+      path: /devices/{deviceId}/status
+      operations:
+      - name: updatedevicestatus
+        method: PUT
+        description: Update Device Status
+        inputParameters:
+        - name: deviceId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: hp-rest
+    description: REST adapter for HP PrintOS Device API.
+    resources:
+    - path: /devices
+      name: listdevices
+      operations:
+      - method: GET
+        name: listdevices
+        description: List Devices
+        call: hp.listdevices
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /devices
+      name: provisiondevice
+      operations:
+      - method: POST
+        name: provisiondevice
+        description: Provision Device
+        call: hp.provisiondevice
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /devices/{deviceId}/status
+      name: updatedevicestatus
+      operations:
+      - method: PUT
+        name: updatedevicestatus
+        description: Update Device Status
+        call: hp.updatedevicestatus
+        with:
+          deviceId: rest.deviceId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: hp-mcp
+    transport: http
+    description: MCP adapter for HP PrintOS Device API for AI agent use.
+    tools:
+    - name: listdevices
+      description: List Devices
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: hp.listdevices
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: provisiondevice
+      description: Provision Device
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: hp.provisiondevice
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: updatedevicestatus
+      description: Update Device Status
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: hp.updatedevicestatus
+      with:
+        deviceId: tools.deviceId
+      inputParameters:
+      - name: deviceId
+        type: string
+        description: deviceId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
