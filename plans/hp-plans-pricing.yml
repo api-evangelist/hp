@@ -4,153 +4,90 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: HP
 providerId: hp
 created: '2026-05-04'
-modified: '2026-05-04'
+modified: '2026-05-05'
+reconciled: false
 tags:
   - Computer Hardware
   - Device Management
   - Printing
-  - Technology
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
+  - PrintOS
+  - TechPulse
+description: HP exposes developer APIs through HP Workforce Solutions (formerly TechPulse Analytics)
+  for device fleet analytics and HP PrintOS for HP Indigo press / industrial printing customers.
+  These APIs are not stand-alone SaaS - access is bundled with the underlying HP service contract
+  (HP Active Care / HP Proactive Insights / HP Indigo PrintOS subscription) and authenticated via
+  OAuth2 against tenant credentials. HP does not publish a public per-call rate card or developer-tier
+  pricing; pricing is part of the device, support, or PrintOS contract negotiated with HP.
+notes: HP API access is contract-bundled, not a separately purchasable SaaS tier. Public per-call
+  pricing is not published. Plan entries describe the contract-bundled access surface rather than
+  list-priced tiers.
+sources:
+  - https://developers.hp.com/
+  - https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api
+  - https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api
 plans:
-  - id: hp-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the HP API surface. Intended for evaluation, prototyping, and low-volume
-      integrations. Real limits and pricing must be reconciled with the provider's published plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://daas.api.hp.com
-          - https://printos.api.hp.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://daas.api.hp.com
-          - https://printos.api.hp.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: HP Workforce Solutions Analytics API
-      - name: HP PrintOS Device API
-  - id: hp-pro
-    name: Professional
-    type: paid
-    description: Production tier for HP. Provides higher quotas, priority support, and access to the broader
-      API portfolio. Pricing placeholder; align with the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains:
-          - https://daas.api.hp.com
-          - https://printos.api.hp.com
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains:
-          - https://daas.api.hp.com
-          - https://printos.api.hp.com
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains:
-          - https://daas.api.hp.com
-          - https://printos.api.hp.com
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: HP Workforce Solutions Analytics API
-      - name: HP PrintOS Device API
-  - id: hp-enterprise
-    name: Enterprise
+  - id: hp-workforce-solutions
+    name: HP Workforce Solutions Analytics API (Bundled)
     type: enterprise
-    description: Custom-negotiated tier for HP. Includes dedicated capacity, contractual SLAs, security
-      review, data residency options, and named technical account management.
+    description: API access for tenants enrolled in HP Active Care / HP Proactive Insights. Included
+      with the device-management service contract; no separate API fee published.
     entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
+      - label: Tenant API access
+        name: workforce_api_access
+        type: subscription
+        metric: tenant
         limit: -1
-        timeFrame: month
-        geo: configurable
-        domains:
-          - https://daas.api.hp.com
-          - https://printos.api.hp.com
+        timeFrame: usage
+        geo: global
         unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains:
-          - https://daas.api.hp.com
-          - https://printos.api.hp.com
-        unit: 1
-        price: custom
+        price: bundled with HP Active Care / Proactive Insights contract
         userMultiplied: false
     elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: HP Workforce Solutions Analytics API
-      - name: HP PrintOS Device API
+      - name: OAuth2 tenant authentication
+      - name: Fleet analytics for enrolled devices
+      - name: Cost optimization and service-management endpoints
+      - name: Requires HP Active Care / Proactive Insights subscription
+  - id: hp-printos-device
+    name: HP PrintOS Device API (Bundled)
+    type: enterprise
+    description: Device-side API for HP Indigo / industrial print shops to attach equipment to the
+      PrintOS Cloud Platform. Bundled with HP Indigo PrintOS subscription.
+    entries:
+      - label: Device attachment and telemetry
+        name: printos_device_access
+        type: subscription
+        metric: device
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: bundled with HP Indigo PrintOS subscription
+        userMultiplied: false
+    elements:
+      - name: Device provisioning and registration
+      - name: Status and telemetry submission
+      - name: PrintOS Cloud Platform integration
+      - name: Requires HP Indigo / PrintOS contract
+  - id: hp-developer-portal
+    name: Developer Portal Self-Service
+    type: freemium
+    description: Documentation and SDK access at developers.hp.com. Free to browse; production access
+      requires the underlying contract.
+    entries:
+      - label: Documentation access
+        name: docs_access
+        type: flat
+        metric: request
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+    elements:
+      - name: API specifications and reference docs
+      - name: SDK and sample code downloads
+      - name: No production credentials issued without contract
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
