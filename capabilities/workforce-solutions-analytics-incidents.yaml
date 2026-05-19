@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: HP Workforce Solutions Analytics API — Incidents
+  description: 'HP Workforce Solutions Analytics API — Incidents. 1 operations. Lead operation: Get Incidents. Self-contained
+    Naftiko capability covering one Hp business surface.'
+  tags:
+  - Hp
+  - Incidents
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    HP_API_KEY: HP_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: workforce-solutions-analytics-incidents
+    baseUri: https://daas.api.hp.com
+    description: HP Workforce Solutions Analytics API — Incidents business capability. Self-contained, no shared references.
+    resources:
+    - name: analytics-incidents
+      path: /analytics/incidents
+      operations:
+      - name: getincidents
+        method: GET
+        description: Get Incidents
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: workforce-solutions-analytics-incidents-rest
+    port: 8080
+    description: REST adapter for HP Workforce Solutions Analytics API — Incidents. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/analytics/incidents
+      name: analytics-incidents
+      description: REST surface for analytics-incidents.
+      operations:
+      - method: GET
+        name: getincidents
+        description: Get Incidents
+        call: workforce-solutions-analytics-incidents.getincidents
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: workforce-solutions-analytics-incidents-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for HP Workforce Solutions Analytics API — Incidents. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: get-incidents
+      description: Get Incidents
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: workforce-solutions-analytics-incidents.getincidents
+      outputParameters:
+      - type: object
+        mapping: $.
