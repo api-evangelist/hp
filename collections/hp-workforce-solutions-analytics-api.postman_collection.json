@@ -1,0 +1,327 @@
+{
+  "item": [
+    {
+      "id": "d18b6907-e07b-4211-9610-6a9a04b5c8e8",
+      "name": "Analytics",
+      "description": {
+        "content": "Device analytics operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8f559935-7c04-4a91-861b-cf4c72e0e648",
+          "name": "Get Device Analytics",
+          "request": {
+            "name": "Get Device Analytics",
+            "description": {
+              "content": "Retrieve analytics data for enrolled devices.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "analytics",
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c1f0e7ce-6d14-4b83-842f-c62992566204",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "analytics",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"deviceId\": \"string\",\n      \"healthScore\": 7103.115384323067,\n      \"utilizationRate\": 8285.454200017166,\n      \"lastReportDate\": \"1971-08-16T07:52:23.401Z\"\n    },\n    {\n      \"deviceId\": \"string\",\n      \"healthScore\": 3829.516822599043,\n      \"utilizationRate\": 3857.3464481524034,\n      \"lastReportDate\": \"1993-06-02T14:20:55.079Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "07396087-ad5b-4b71-a1da-87333b61f39e",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "analytics",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5d23d30f-055c-44ac-90b7-2f284c13dccf",
+      "name": "Devices",
+      "description": {
+        "content": "Device management operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "876a0f3f-2448-4c91-af5a-453c0972878f",
+          "name": "Get Devices",
+          "request": {
+            "name": "Get Devices",
+            "description": {
+              "content": "Retrieve a list of enrolled devices.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cb90a91a-a34d-408a-a80b-2da9169f5f36",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"devices\": [\n    {\n      \"id\": \"string\",\n      \"model\": \"string\",\n      \"serialNumber\": \"string\",\n      \"status\": \"string\"\n    },\n    {\n      \"id\": \"string\",\n      \"model\": \"string\",\n      \"serialNumber\": \"string\",\n      \"status\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "573282fa-3881-494e-9d1b-712f2bc792ea",
+      "name": "Incidents",
+      "description": {
+        "content": "Incident management operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "27067651-3948-4cc2-9a3d-4c5dad27f946",
+          "name": "Get Incidents",
+          "request": {
+            "name": "Get Incidents",
+            "description": {
+              "content": "Retrieve incident data for managed devices.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "analytics",
+                "incidents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "5071c920-c8d2-4c67-a759-81d0e942b313",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "analytics",
+                    "incidents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"incidents\": [\n    {\n      \"id\": \"string\",\n      \"deviceId\": \"string\",\n      \"severity\": \"string\",\n      \"description\": \"string\",\n      \"createdAt\": \"1985-02-18T12:38:46.136Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"deviceId\": \"string\",\n      \"severity\": \"string\",\n      \"description\": \"string\",\n      \"createdAt\": \"1950-12-26T12:43:35.968Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://daas.api.hp.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "128cdc9f-542c-4dff-8872-0fc5a1ecf3ce",
+    "name": "HP Workforce Solutions Analytics API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The HP Workforce Solutions Analytics API provides insightful analytics on planning, cost optimization, and service management capabilities for devices enrolled in HP Proactive Insights.\n\nContact Support:\n Name: HP Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}

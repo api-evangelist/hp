@@ -1,0 +1,79 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "HP Workforce Solutions Analytics API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Analytics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Device Analytics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://daas.api.hp.com/analytics/devices",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve analytics data for enrolled devices."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Incidents",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Incidents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://daas.api.hp.com/analytics/incidents"
+          },
+          "docs": "Retrieve incident data for managed devices."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Devices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Devices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://daas.api.hp.com/devices"
+          },
+          "docs": "Retrieve a list of enrolled devices."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
