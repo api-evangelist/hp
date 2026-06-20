@@ -6,7 +6,7 @@ description: >-
 type: Index
 position: Consumer
 access: 3rd-Party
-image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
   - Computer Hardware
   - Device Management
@@ -24,7 +24,7 @@ apis:
       The HP Workforce Solutions Analytics API (formerly TechPulse Analytics API) provides insightful analytics on
       planning, cost optimization, and service management capabilities for devices enrolled in HP Proactive Insights. It
       supports OAuth2 authentication.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api
     baseURL: https://daas.api.hp.com
     tags:
@@ -43,7 +43,7 @@ apis:
       The HP PrintOS Device API enables device manufacturers and print shop IT developers to attach their devices to the
       PrintOS Cloud Platform. Once provisioned, devices can make secure REST calls to interact with the platform APIs to
       send device status and perform operations.
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api
     baseURL: https://printos.api.hp.com
     tags:
