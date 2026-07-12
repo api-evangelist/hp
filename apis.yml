@@ -57,6 +57,10 @@ apis:
       - type: OpenAPI
         url: openapi/hp-printos-device-api-openapi.yml
 common:
+  - type: VulnerabilityDisclosure
+    url: security/hp-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/hp-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/HPInc
   - type: LinkedIn
