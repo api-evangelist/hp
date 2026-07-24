@@ -1,0 +1,63 @@
+openapi: 3.1.0
+info:
+  title: HP PrintOS Device Analytics API
+  description: The HP PrintOS Device API enables device manufacturers and print shop IT developers to attach their devices to the PrintOS Cloud Platform and interact with platform services.
+  version: 1.0.0
+  contact:
+    name: HP Developer Portal
+    url: https://developers.hp.com/
+servers:
+- url: https://printos.api.hp.com
+  description: Production
+tags:
+- name: Analytics
+  description: Device analytics operations
+paths:
+  /analytics/devices:
+    get:
+      operationId: getDeviceAnalytics
+      summary: Get Device Analytics
+      description: Retrieve analytics data for enrolled devices.
+      tags:
+      - Analytics
+      parameters:
+      - name: startDate
+        in: query
+        schema:
+          type: string
+          format: date
+      - name: endDate
+        in: query
+        schema:
+          type: string
+          format: date
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DeviceAnalyticsList'
+        '401':
+          description: Unauthorized
+components:
+  schemas:
+    DeviceAnalytics:
+      type: object
+      properties:
+        deviceId:
+          type: string
+        healthScore:
+          type: number
+        utilizationRate:
+          type: number
+        lastReportDate:
+          type: string
+          format: date-time
+    DeviceAnalyticsList:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/DeviceAnalytics'
