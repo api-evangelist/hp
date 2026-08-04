@@ -1,0 +1,117 @@
+openapi: 3.1.0
+info:
+  title: HP PrintOS Device API
+  description: >-
+    The HP PrintOS Device API enables device manufacturers and print shop IT
+    developers to attach their devices to the PrintOS Cloud Platform and
+    interact with platform services.
+  version: 1.0.0
+  contact:
+    name: HP Developer Portal
+    url: https://developers.hp.com/
+servers:
+  - url: https://printos.api.hp.com
+    description: Production
+paths:
+  /devices:
+    get:
+      operationId: listDevices
+      summary: List Devices
+      description: Retrieve a list of provisioned print devices.
+      tags:
+        - Devices
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrintDeviceList'
+    post:
+      operationId: provisionDevice
+      summary: Provision Device
+      description: Register a new device with the PrintOS Cloud Platform.
+      tags:
+        - Devices
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceProvisionRequest'
+      responses:
+        '201':
+          description: Device provisioned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PrintDevice'
+  /devices/{deviceId}/status:
+    put:
+      operationId: updateDeviceStatus
+      summary: Update Device Status
+      description: Send device status update to the platform.
+      tags:
+        - Devices
+      parameters:
+        - name: deviceId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeviceStatusUpdate'
+      responses:
+        '200':
+          description: Status updated
+tags:
+  - name: Devices
+    description: Print device management operations
+components:
+  schemas:
+    PrintDevice:
+      type: object
+      properties:
+        id:
+          type: string
+        model:
+          type: string
+        serialNumber:
+          type: string
+        status:
+          type: string
+        registeredAt:
+          type: string
+          format: date-time
+    PrintDeviceList:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrintDevice'
+    DeviceProvisionRequest:
+      type: object
+      properties:
+        model:
+          type: string
+        serialNumber:
+          type: string
+        location:
+          type: string
+    DeviceStatusUpdate:
+      type: object
+      properties:
+        status:
+          type: string
+        metrics:
+          type: object
+          properties:
+            pagesTotal:
+              type: integer
+            inkLevel:
+              type: number

@@ -1,0 +1,18 @@
+{
+  "provider": "hp",
+  "sources": [
+    "hp-analytics-api-openapi.yml",
+    "hp-devices-api-openapi.yml",
+    "hp-incidents-api-openapi.yml"
+  ],
+  "outputs": [
+    "hp-analytics-api-openapi.yml",
+    "hp-devices-api-openapi.yml",
+    "hp-incidents-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
