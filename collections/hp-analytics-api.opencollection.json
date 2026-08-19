@@ -1,0 +1,41 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "HP PrintOS Device Analytics API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Analytics",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Device Analytics",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://printos.api.hp.com/analytics/devices",
+            "params": [
+              {
+                "name": "startDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "endDate",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Retrieve analytics data for enrolled devices."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

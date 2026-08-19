@@ -1,0 +1,294 @@
+{
+  "item": [
+    {
+      "id": "103178ef-9571-46f9-b1a9-26e5d28c5bf6",
+      "name": "Devices",
+      "description": {
+        "content": "Print device management operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3f9fbf86-8ce1-4802-9e60-ce28670bf1ee",
+          "name": "List Devices",
+          "request": {
+            "name": "List Devices",
+            "description": {
+              "content": "Retrieve a list of provisioned print devices.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "dfe44338-55c4-4fac-aa41-b7efc0c2c934",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"devices\": [\n    {\n      \"id\": \"string\",\n      \"model\": \"string\",\n      \"serialNumber\": \"string\",\n      \"status\": \"string\",\n      \"registeredAt\": \"1975-03-30T04:43:18.131Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"model\": \"string\",\n      \"serialNumber\": \"string\",\n      \"status\": \"string\",\n      \"registeredAt\": \"1976-03-13T01:20:45.241Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "27d0d182-6842-4ef4-8b1e-b27f02375ec6",
+          "name": "Provision Device",
+          "request": {
+            "name": "Provision Device",
+            "description": {
+              "content": "Register a new device with the PrintOS Cloud Platform.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"model\": \"<string>\",\n  \"serialNumber\": \"<string>\",\n  \"location\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "393ba9ab-569b-4c36-999c-ba3bd21965b9",
+              "name": "Device provisioned",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"model\": \"<string>\",\n  \"serialNumber\": \"<string>\",\n  \"location\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": \"string\",\n  \"model\": \"string\",\n  \"serialNumber\": \"string\",\n  \"status\": \"string\",\n  \"registeredAt\": \"1960-11-04T14:07:18.523Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "307ef941-8995-4540-b39d-9c3adaf0e658",
+          "name": "Update Device Status",
+          "request": {
+            "name": "Update Device Status",
+            "description": {
+              "content": "Send device status update to the platform.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "devices",
+                ":deviceId",
+                "status"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "deviceId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"<string>\",\n  \"metrics\": {\n    \"pagesTotal\": \"<integer>\",\n    \"inkLevel\": \"<number>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "334d6cc9-75a2-45c6-b934-b261cb186dec",
+              "name": "Status updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "devices",
+                    ":deviceId",
+                    "status"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "deviceId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"status\": \"<string>\",\n  \"metrics\": {\n    \"pagesTotal\": \"<integer>\",\n    \"inkLevel\": \"<number>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://printos.api.hp.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "2a14fd8c-e2e7-4ec5-940c-f6727c03bace",
+    "name": "HP PrintOS Device Analytics Devices API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The HP PrintOS Device API enables device manufacturers and print shop IT developers to attach their devices to the PrintOS Cloud Platform and interact with platform services.\n\nContact Support:\n Name: HP Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}

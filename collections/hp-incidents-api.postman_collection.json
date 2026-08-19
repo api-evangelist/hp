@@ -1,0 +1,104 @@
+{
+  "item": [
+    {
+      "id": "e84155f3-d935-42bc-afe1-9f8b16c01de0",
+      "name": "Incidents",
+      "description": {
+        "content": "Incident management operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "aee892c3-9a95-4af2-91e0-93ca7ca40c43",
+          "name": "Get Incidents",
+          "request": {
+            "name": "Get Incidents",
+            "description": {
+              "content": "Retrieve incident data for managed devices.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "analytics",
+                "incidents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "db7f15cd-b789-410f-809f-c7386a5ed425",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "analytics",
+                    "incidents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"incidents\": [\n    {\n      \"id\": \"string\",\n      \"deviceId\": \"string\",\n      \"severity\": \"string\",\n      \"description\": \"string\",\n      \"createdAt\": \"1962-09-25T17:47:55.483Z\"\n    },\n    {\n      \"id\": \"string\",\n      \"deviceId\": \"string\",\n      \"severity\": \"string\",\n      \"description\": \"string\",\n      \"createdAt\": \"2008-11-11T20:04:12.908Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://printos.api.hp.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6701910e-54b7-4b71-8641-85e89911aee5",
+    "name": "HP PrintOS Device Analytics Incidents API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The HP PrintOS Device API enables device manufacturers and print shop IT developers to attach their devices to the PrintOS Cloud Platform and interact with platform services.\n\nContact Support:\n Name: HP Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}

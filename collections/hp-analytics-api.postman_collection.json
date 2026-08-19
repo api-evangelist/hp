@@ -1,0 +1,163 @@
+{
+  "item": [
+    {
+      "id": "3c68f0df-8067-4ac1-a4b0-a110fc56484b",
+      "name": "Analytics",
+      "description": {
+        "content": "Device analytics operations",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "867734b4-7027-403b-81f2-262c6e330b88",
+          "name": "Get Device Analytics",
+          "request": {
+            "name": "Get Device Analytics",
+            "description": {
+              "content": "Retrieve analytics data for enrolled devices.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "analytics",
+                "devices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "startDate",
+                  "value": "<date>"
+                },
+                {
+                  "disabled": false,
+                  "key": "endDate",
+                  "value": "<date>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "857e3dd5-4f17-4ff8-8621-74ab4906578a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "analytics",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"deviceId\": \"string\",\n      \"healthScore\": 1386.9077986163236,\n      \"utilizationRate\": 1658.1002593966043,\n      \"lastReportDate\": \"2019-07-16T23:08:07.174Z\"\n    },\n    {\n      \"deviceId\": \"string\",\n      \"healthScore\": 7724.466570357793,\n      \"utilizationRate\": 1878.055457850527,\n      \"lastReportDate\": \"1995-04-07T21:04:33.239Z\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "732d2e47-b241-4597-88c6-dd645ad1fe65",
+              "name": "Unauthorized",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "analytics",
+                    "devices"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "startDate",
+                      "value": "<date>"
+                    },
+                    {
+                      "key": "endDate",
+                      "value": "<date>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://printos.api.hp.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d7b8d894-dc3e-4889-9f03-383bfc9fdb66",
+    "name": "HP PrintOS Device Analytics API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The HP PrintOS Device API enables device manufacturers and print shop IT developers to attach their devices to the PrintOS Cloud Platform and interact with platform services.\n\nContact Support:\n Name: HP Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}
