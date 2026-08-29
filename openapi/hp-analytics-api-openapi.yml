@@ -1,13 +1,13 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: HP PrintOS Device Analytics API
-  description: The HP PrintOS Device API enables device manufacturers and print shop IT developers to attach their devices to the PrintOS Cloud Platform and interact with platform services.
+  title: HP Workforce Solutions Analytics API
+  description: The HP Workforce Solutions Analytics API provides insightful analytics on planning, cost optimization, and service management capabilities for devices enrolled in HP Proactive Insights.
   version: 1.0.0
   contact:
     name: HP Developer Portal
     url: https://developers.hp.com/
 servers:
-- url: https://printos.api.hp.com
+- url: https://daas.api.hp.com
   description: Production
 tags:
 - name: Analytics

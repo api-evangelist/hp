@@ -1,18 +1,26 @@
 {
   "provider": "hp",
   "sources": [
-    "hp-analytics-api-openapi.yml",
-    "hp-devices-api-openapi.yml",
-    "hp-incidents-api-openapi.yml"
+    "_original/hp-printos-device-api-openapi.yml",
+    "_original/hp-workforce-solutions-analytics-api-openapi.yml"
   ],
   "outputs": [
-    "hp-analytics-api-openapi.yml",
     "hp-devices-api-openapi.yml",
+    "hp-analytics-api-openapi.yml",
     "hp-incidents-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "hp-printos-device-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "hp-workforce-solutions-analytics-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "tag 'Devices' spans 2 source specs (hp-printos-device-api-openapi.yml, hp-workforce-solutions-analytics-api-openapi.yml): per-path servers applied"
+  ],
+  "skipped": [
+    "hp-analytics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hp-devices-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "hp-incidents-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
