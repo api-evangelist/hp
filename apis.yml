@@ -4,6 +4,17 @@ description: >-
   HP Inc. is a global technology company that provides personal computing devices, printers, 3D printing solutions,
   hyperscale computing solutions, and related supplies, services, and software.
 type: Index
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: true
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - openapi
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: unknown
