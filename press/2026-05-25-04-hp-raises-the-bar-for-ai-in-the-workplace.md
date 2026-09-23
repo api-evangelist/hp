@@ -1,7 +1,9 @@
 ---
 title: HP Raises the Bar for AI in the Workplace
 url: https://quocirca.com/content/hp-raises-the-bar-for-ai-in-the-workplace/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"HP" press release artificial intelligence'
 position: 4
 source: serpapi-google

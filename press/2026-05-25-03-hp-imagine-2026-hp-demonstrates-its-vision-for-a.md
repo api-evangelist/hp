@@ -1,7 +1,9 @@
 ---
 title: 'HP Imagine 2026: HP Demonstrates Its Vision for a ...'
 url: https://www.hp.com/us-en/newsroom/press-releases/2026/hp-introduces-hp-iq-connected-ecosystem.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"HP" press release artificial intelligence'
 position: 3
 source: serpapi-google

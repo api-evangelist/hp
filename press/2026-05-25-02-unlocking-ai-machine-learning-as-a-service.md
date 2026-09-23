@@ -1,7 +1,9 @@
 ---
 title: 'Unlocking AI: Machine Learning as a Service'
 url: https://www.hp.com/us-en/workstations/learning-hub/ai-for-all.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"HP" press release artificial intelligence'
 position: 2
 source: serpapi-google

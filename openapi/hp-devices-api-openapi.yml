@@ -85,27 +85,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PrintDevice'
-    DeviceProvisionRequest:
-      type: object
-      properties:
-        model:
-          type: string
-        serialNumber:
-          type: string
-        location:
-          type: string
-    DeviceStatusUpdate:
-      type: object
-      properties:
-        status:
-          type: string
-        metrics:
-          type: object
-          properties:
-            pagesTotal:
-              type: integer
-            inkLevel:
-              type: number
     PrintDevice:
       type: object
       properties:
@@ -120,6 +99,27 @@ components:
         registeredAt:
           type: string
           format: date-time
+    DeviceStatusUpdate:
+      type: object
+      properties:
+        status:
+          type: string
+        metrics:
+          type: object
+          properties:
+            pagesTotal:
+              type: integer
+            inkLevel:
+              type: number
+    DeviceProvisionRequest:
+      type: object
+      properties:
+        model:
+          type: string
+        serialNumber:
+          type: string
+        location:
+          type: string
     Device:
       type: object
       properties:

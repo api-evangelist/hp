@@ -16,7 +16,8 @@
     "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
     "hp-printos-device-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "hp-workforce-solutions-analytics-api-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
-    "tag 'Devices' spans 2 source specs (hp-printos-device-api-openapi.yml, hp-workforce-solutions-analytics-api-openapi.yml): per-path servers applied"
+    "tag 'Devices' spans 2 source specs (hp-printos-device-api-openapi.yml, hp-workforce-solutions-analytics-api-openapi.yml): per-path servers applied",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "hp-analytics-api-openapi.yml: previously refined output, superseded by openapi/_original/",

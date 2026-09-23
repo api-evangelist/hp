@@ -1,7 +1,9 @@
 ---
 title: HP acquires Humane Platform and team for $116M
 url: https://www.facebook.com/groups/AIUGM/posts/4020109041603394/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"HP" press release artificial intelligence'
 position: 5
 source: serpapi-google
