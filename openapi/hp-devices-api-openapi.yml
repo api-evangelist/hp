@@ -78,6 +78,22 @@ paths:
       description: Production
 components:
   schemas:
+    DeviceProvisionRequest:
+      type: object
+      properties:
+        model:
+          type: string
+        serialNumber:
+          type: string
+        location:
+          type: string
+    PrintDeviceList:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/PrintDevice'
     DeviceStatusUpdate:
       type: object
       properties:
@@ -104,29 +120,6 @@ components:
         registeredAt:
           type: string
           format: date-time
-    PrintDeviceList:
-      type: object
-      properties:
-        devices:
-          type: array
-          items:
-            $ref: '#/components/schemas/PrintDevice'
-    DeviceProvisionRequest:
-      type: object
-      properties:
-        model:
-          type: string
-        serialNumber:
-          type: string
-        location:
-          type: string
-    DeviceList:
-      type: object
-      properties:
-        devices:
-          type: array
-          items:
-            $ref: '#/components/schemas/Device'
     Device:
       type: object
       properties:
@@ -138,6 +131,13 @@ components:
           type: string
         status:
           type: string
+    DeviceList:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/Device'
 x-refined-from:
 - hp-printos-device-api-openapi.yml
 - hp-workforce-solutions-analytics-api-openapi.yml
