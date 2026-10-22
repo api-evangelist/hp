@@ -16,9 +16,71 @@ edges:
   detected: '2026-10-18'
   detected_by: mirror-platform-listings.py
   category: Zoom app
+- partner_name: US EPA ENERGY STAR
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://data.energystar.gov/d/8wj2-sec8
+  category: ENERGY STAR product certification
+  contract_reference:
+    register: ENERGY STAR Model Index, all currently certified models (data.energystar.gov/resource/8wj2-sec8)
+    standard: ENERGY STAR (US EPA product specifications)
+    spec_file: null
+    role: energy-star-partner
+    registered_name: HP Inc.
+    register_id: https://data.energystar.gov/d/8wj2-sec8
+    matched_domain: hp.com
+    matched_by: domain+name-among-holders
+    certified_products:
+    - product: Computers
+      product_type: Computers
+      lapsed: false
+      brands:
+      - HP
+      first_certified: '2025-02-14'
+    - product: Displays
+      product_type: Displays
+      lapsed: false
+      brands:
+      - HP
+      first_certified: '2019-09-09'
+    - product: Imaging Equipment
+      product_type: Imaging Equipment
+      lapsed: false
+      brands:
+      - HP
+      - HP Inc.
+      - HPI
+      first_certified: '2017-07-12'
+    - product: Telephony
+      product_type: Telephony
+      lapsed: false
+      brands:
+      - ',hp, HP, HP Inc'
+      - ',hp, HP, HP Inc.'
+      - Poly
+      first_certified: '2021-09-02'
+    connected_product_types: []
+    signal_note: 'certified_products = ONE entry per ENERGY STAR product category with a currently certified model
+      (the Model Index lists current certifications only, so lapsed is False; delisted models drop out); connected:
+      true where the category''s dataset flags connected / network capability for this partner''s models (Smart
+      Thermostats and Connected lighting are connected by definition). Brands are context; model counts are never
+      counted.'
+    detected_by: sweep-energy-star-certified-products.py
+    detected: '2026-10-22'
+    identity: wikidata Q21404084 'HP Inc.' P856 https://www.hp.com/
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-energy-star-certified-products.py
+  first_seen: '2026-10-22'
 generated: '2026-10-18'
 method: searched
 source:
 - zoom/integrations/zoom-integration-edges.yml
 checked:
 - zoom/integrations/zoom-integration-edges.yml
+- https://data.energystar.gov/api/views/metadata/v1
+- https://data.energystar.gov/resource/8wj2-sec8.json
+- https://www.energystar.gov/productfinder/
