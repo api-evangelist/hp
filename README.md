@@ -1,4 +1,4 @@
-# HP (hp)
+# HP
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,78 +66,119 @@
 
 HP Inc. is a global technology company that provides personal computing devices, printers, 3D printing solutions, hyperscale computing solutions, and related supplies, services, and software.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/hp/refs/heads/main/apis.yml)
+**Areas:** Computer Hardware · Device Management · Printing · Technology · Fortune 100
 
-## Scope
+## HP on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for HP is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hp/](https://apis.io/providers/hp/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (3)
 
-- Computer Hardware
-- Device Management
-- Printing
-- Technology
+- [HP Analytics API](https://apis.io/apis/hp/hp-analytics-api/) — Device analytics operations
+- [HP Devices API](https://apis.io/apis/hp/hp-devices-api/) — Print device management operations
+- [HP Incidents API](https://apis.io/apis/hp/hp-incidents-api/) — Incident management operations
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### HP Workforce Solutions Analytics API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The HP Workforce Solutions Analytics API (formerly TechPulse Analytics API) provides insightful analytics on planning, cost optimization, and service management capabilities for devices enrolled in HP Proactive Insights. It supports OAuth2 authentication.
+- [Hp Agentic Access](https://apis.io/agentic-access/hp/hp-agentic-access/)
 
-- **Human URL:** [https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api](https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api)
-- **Base URL:** `https://daas.api.hp.com`
+#### Collections (5)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Analytics
-- Device Management
-- TechPulse
-- Workforce
+- [HP PrintOS Device Analytics API](https://apis.io/collections/hp/open-hp-analytics-api/)
+- [HP PrintOS Device Analytics Devices API](https://apis.io/collections/hp/open-hp-devices-api/)
+- [HP PrintOS Device Analytics Incidents API](https://apis.io/collections/hp/open-hp-incidents-api/)
+- [HP PrintOS Device API](https://apis.io/collections/hp/open-hp-printos-device-api/)
+- [HP Workforce Solutions Analytics API](https://apis.io/collections/hp/open-hp-workforce-solutions-analytics-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://developers.hp.com/hp-proactive-insights/api/hp-workforce-solutions-analytics-api)
-- [OpenAPI](openapi/hp-workforce-solutions-analytics-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/hp-workforce-solutions-analytics-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/hp-workforce-solutions-analytics-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### HP PrintOS Device API
+- [Hp Domain Security](https://apis.io/security/hp/hp-domain-security/)
+- [Hp Vulnerability Disclosure](https://apis.io/security/hp/hp-vulnerability-disclosure/)
 
-The HP PrintOS Device API enables device manufacturers and print shop IT developers to attach their devices to the PrintOS Cloud Platform. Once provisioned, devices can make secure REST calls to interact with the platform APIs to send device status and perform operations.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api](https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api)
-- **Base URL:** `https://printos.api.hp.com`
+Published plans, tiers and prices.
 
-#### Tags
+- [Hp Plans Pricing](https://apis.io/plans/hp/hp-plans-pricing/)
 
-- Cloud
-- Devices
-- Printing
-- PrintOS
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://developers.hp.com/printos-hp-indigo-sdks-and-apis/device-api)
-- [OpenAPI](openapi/hp-printos-device-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/hp-printos-device-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/hp-printos-device-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Hp Rate Limits](https://apis.io/rate-limits/hp/hp-rate-limits/)
 
-## Common Properties
+#### FinOps (1)
 
-- [GitHub Organization](https://github.com/HPInc)
-- [LinkedIn](https://www.linkedin.com/company/hp)
+What the API costs to run, by operation.
+
+- [Hp Finops](https://apis.io/finops/hp/hp-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.hp.com/)
-- [Developer Portal](https://developers.hp.com/)
+- [GitHub](https://github.com/HPInc)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** info@apievangelist.com
+**Kin Score 22.4** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 46.1 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 19.0 |
+| Access clarity | 7.9 |
+
+**Agent readiness 15.4** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hp/](https://apis.io/providers/hp/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for HP: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hp/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
